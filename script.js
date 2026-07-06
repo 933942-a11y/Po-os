@@ -1,25 +1,26 @@
-var _SYSTEM_PATHS = ["C:/Windows/System32/kernel32.dll", "/var/www/html/cine-os/", "https://cine-os.local/api/v1/auth"];
+lvar _SYSTEM_PATHS = ["C:/Windows/System32/kernel32.dll", "/var/www/html/cine-os/", "https://cine-os.local/api/v1/auth"];
 var _devBuildVer = "3.0.1";
 
+
 var APPS = {
-    'cine': {title: 'CINE // HUB', path: 'script/Apps/Cine/index.html', icon: 'https://cdn.worldvectorlogo.com/logos/netflix-logo-icon.svg', pinned: true},
+    'po': {title: 'PO // HUB', path: 'script/Apps/Po/index.html', icon: 'https://cdn.worldvectorlogo.com/logos/netflix-logo-icon.svg', pinned: true},
     'term': {title: 'Spotify', path: 'script/Apps/Spotify/index.html', icon: 'https://cdn.pixabay.com/photo/2016/10/22/00/15/spotify-1759471_1280.jpg', pinned: true},
-    'files': {title: 'PS5 Emu', path: 'script/Apps/Ps5/index.html', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-OeL_be7RFaoHi3PswkuAR5XcMgBNRDynsg&s', pinned: true},
-    'web': {title: 'Cine-Web', path: 'script/Apps/Web/index.html', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeD89ZcX5W1FBtal7RerasT27q-OmZqnBixQ&s', pinned: true},
+    'files': {title: 'po.games', path: 'script/Apps/Ps5/index.html', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-OeL_be7RFaoHi3PswkuAR5XcMgBNRDynsg&s', pinned: true},
+    'web': {title: 'PO-Web', path: 'script/Apps/Web/index.html', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeD89ZcX5W1FBtal7RerasT27q-OmZqnBixQ&s', pinned: true},
     'settings': {title: 'CONFIG', internal: true, icon: 'https://cdn.iconscout.com/icon/free/png-256/free-apple-settings-icon-svg-download-png-493162.png', pinned: true},
     'discord': {title: 'Discord', path: 'script/Apps/Discord/index.html', icon: 'https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png', pinned: false},
-    'roblox': {title: 'Roblox', path: 'script/Apps/Roblox/index.html', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9KvNyFWMg_bjo_q_1IVLKFWbfCeonn2qDow&s', pinned: false},
+    'roblox': {title: 'po.games', path: 'script/Apps/Roblox/index.html', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9KvNyFWMg_bjo_q_1IVLKFWbfCeonn2qDow&s', pinned: false},
     'android': {title: 'Android', path: 'script/Apps/Android/index.html', icon: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/android-icon.png', pinned: false},
-    'ciniai': {title: 'Cini AI', path: 'script/Apps/Cini/index.html', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkLXhvns5Rrdf-XBNlWcPIRh0hlJfWnEtBWg&s', pinned: false},
+    'poai': {title: 'PO AI', path: 'script/Apps/Po/index.html', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkLXhvns5Rrdf-XBNlWcPIRh0hlJfWnEtBWg&s', pinned: false},
     'VM': {title: 'Windows Virtual-Machine', path: 'script/Apps/VM/index.html', icon: 'https://static1.squarespace.com/static/68e69c83884dc82cc035a923/69454e29c6db7516b2566fca/69454e32c6db7516b256749a/1766149682532/Virtualbox_logo.png?format=original', pinned: false},
     'crunchyroll': {title: 'CrunchyRoll', path: 'script/Apps/Crunchy/index.html', icon: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a0a4547a-06c5-4740-b87a-ca9c4fa0171e/dduaesk-2b3e85d2-3116-4eb5-8260-f413d1fc670e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9hMGE0NTQ3YS0wNmM1LTQ3NDAtYjg3YS1jYTljNGZhMDE3MWUvZGR1YWVzay0yYjNlODVkMi0zMTE2LTRlYjUtODI2MC1mNDEzZDFmYzY3MGUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.vReffTSSKpde4w8EwFxz_CttxlLay8fXOq0goYh6rsg', pinned: false},
-    'Geforce': {title: 'GEFORCE NOW', path: 'script/Apps/Geforce/index.html', icon: 'https://play-lh.googleusercontent.com/_-b_HQXrVyyhZSHj_BoE9u_-cxkcHDH_yLX5rDjJsFMIfsCNQs9F3QP4JvEFcWaSIz0=w240-h480-rw', pinned: false},
-    'Fortnite': {title: 'Fortnite', path: 'script/Apps/Fortnite/index.html', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShiXrQ-cvZeDyQNPIZCv_hsaUCAe5j_rXJ7Q&s', pinned: false},
-    'RocketL': {title: 'Rocket League', path: 'script/Apps/RocketL/index.html', icon: 'https://ygo-assets-entities-us.yougov.net/87bb7a16-2b62-11e8-82b1-37bb0d207ced.jpg?zcw=518&zch=518&zct=10&zcl=0', pinned: false},
-    'Xbox': {title: 'Xbox', path: 'script/Apps/Xbox/index.html', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRknRQh-WRK4F75YB3EAlfrsqAk66Xjn45sBg&s', pinned: false},
+    'Geforce': {title: 'po.games', path: 'script/Apps/Geforce/index.html', icon: 'https://play-lh.googleusercontent.com/_-b_HQXrVyyhZSHj_BoE9u_-cxkcHDH_yLX5rDjJsFMIfsCNQs9F3QP4JvEFcWaSIz0=w240-h480-rw', pinned: false},
+    'Fortnite': {title: 'po.games', path: 'script/Apps/Fortnite/index.html', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShiXrQ-cvZeDyQNPIZCv_hsaUCAe5j_rXJ7Q&s', pinned: false},
+    'RocketL': {title: 'po.games', path: 'script/Apps/RocketL/index.html', icon: 'https://ygo-assets-entities-us.yougov.net/87bb7a16-2b62-11e8-82b1-37bb0d207ced.jpg?zcw=518&zch=518&zct=10&zcl=0', pinned: false},
+    'Xbox': {title: 'po.games', path: 'script/Apps/Xbox/index.html', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRknRQh-WRK4F75YB3EAlfrsqAk66Xjn45sBg&s', pinned: false},
 };
 
-var savedPins = localStorage.getItem('c_pins_v2');
+var savedPins = localStorage.getItem('p_pins_v2');
 if(savedPins) {
     let p = JSON.parse(savedPins);
     for(let k in p) {
@@ -30,7 +31,7 @@ if(savedPins) {
 function syncPins() {
     let obj = {};
     for(let k in APPS) obj[k] = APPS[k].pinned;
-    localStorage.setItem('c_pins_v2', JSON.stringify(obj));
+    localStorage.setItem('p_pins_v2', JSON.stringify(obj));
 }
 
 var wallpaperRegistry = {
@@ -38,7 +39,7 @@ var wallpaperRegistry = {
     "green": {id: "green", name: "Green Anime", url: "Videos/green.mp4", locked: false},
     "33A56": {id: "hunt_trait", name: "Hunt Showdown", url: "Videos/33A56.mp4", locked: true},
     "45E33": {id: "45E33", name: "45E33", url: "Videos/45E33.mp4", locked: false},
-    "55Cine": {id: "55Cine", name: "Cine 55", url: "Videos/55Cine.PNG", locked: false},
+    "55Po": {id: "55Po", name: "Po 55", url: "Videos/55Po.PNG", locked: false},
     "99Med": {id: "99Med", name: "99 Med", url: "Videos/99Med.mp4", locked: false},
     "Brother": {id: "Brother", name: "Brother", url: "Videos/Brother.mp4", locked: false},
     "F-1": {id: "F-1", name: "F-1 Formula", url: "Videos/F-1.mp4", locked: false},
@@ -61,7 +62,7 @@ var wallpaperRegistry = {
     "Desktop": {id: "Desktop", name: "Desktop Lines", url: "Videos/Desktop.mp4", locked: false}
 };
 
-var sysConfig = JSON.parse(localStorage.getItem('cine_sys_config')) || {};
+var sysConfig = JSON.parse(localStorage.getItem('po_sys_config')) || {};
 if(sysConfig.optBg === undefined) sysConfig.optBg = false;
 if(sysConfig.shortBoot === undefined) sysConfig.shortBoot = false;
 if(sysConfig.wpLoop === undefined) sysConfig.wpLoop = false;
@@ -74,13 +75,13 @@ if(!sysConfig.cloak) sysConfig.cloak = 'none';
 
 window.updateSysSetting = function(key, value) {
     sysConfig[key] = value;
-    localStorage.setItem('cine_sys_config', JSON.stringify(sysConfig));
+    localStorage.setItem('po_sys_config', JSON.stringify(sysConfig));
     if(key === 'optBg') applySystemSettings();
     if(key === 'wpLoop') updateWallpaperLoop();
 };
 
 var cloaks = {
-    none: {title: "Cine-OS", icon: ""},
+    none: {title: "PO OS", icon: ""},
     google: {title: "Google", icon: "https://www.google.com/favicon.ico"},
     drive: {title: "My Drive - Google Drive", icon: "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png"},
     canvas: {title: "Dashboard", icon: "https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e10d657a73.ico"},
@@ -89,7 +90,7 @@ var cloaks = {
 
 window.updateCloak = function(key) {
     sysConfig.cloak = key;
-    localStorage.setItem('cine_sys_config', JSON.stringify(sysConfig));
+    localStorage.setItem('po_sys_config', JSON.stringify(sysConfig));
     applyCloak();
 };
 
@@ -107,7 +108,7 @@ function applyCloak() {
         n.href = sel.icon;
         document.getElementsByTagName('head')[0].appendChild(n);
     } else {
-        document.title = "Cine-OS";
+        document.title = "PO OS";
     }
 }
 setInterval(applyCloak, 2000);
@@ -317,7 +318,7 @@ window.unlockSystem = function() {
             if(bV.style.display !== 'none') bV.play().catch(function(e){});
         }
         if(!welcomeShown) {
-            showNotification("Welcome To Cine V2", "Checkout Settings for FAQ!");
+            showNotification("Welcome To PO OS", "Checkout Settings for FAQ!");
             welcomeShown = true;
         }
     }, 600);
@@ -429,7 +430,7 @@ function updateSidebarData() {
     try {
         let ps = JSON.parse(localStorage.getItem('ps_purchased'));
         if(ps && ps.length > 0) document.getElementById('last-game-name').innerText = "PS5 Library Ready";
-        let sp = JSON.parse(localStorage.getItem('cinify_cache'));
+        let sp = JSON.parse(localStorage.getItem('poify_cache'));
         if(sp) {
             let k = Object.keys(sp);
             if(k.length > 0) {
@@ -576,7 +577,7 @@ function openWindow(id) {
                     <div class="setting-card">
                         <div class="setting-text"><b>Tab Cloaking</b><small>Disguises OS as another site</small></div>
                         <select id="cloak-select" onchange="window.parent.updateCloak(this.value)">
-                            <option value="none">None (Cine-OS)</option>
+                            <option value="none">None (PO OS)</option>
                             <option value="google">Google</option>
                             <option value="drive">Google Drive</option>
                             <option value="canvas">Canvas</option>
@@ -678,10 +679,10 @@ document.addEventListener('mouseover', function(e) {
     }
 });
 
-var desktopLayout = JSON.parse(localStorage.getItem('cine_desktop_v2')) || [];
+var desktopLayout = JSON.parse(localStorage.getItem('po_desktop_v2')) || [];
 
 function saveDesktop() {
-    localStorage.setItem('cine_desktop_v2', JSON.stringify(desktopLayout));
+    localStorage.setItem('po_desktop_v2', JSON.stringify(desktopLayout));
     loadDesktop();
 }
 
@@ -971,7 +972,7 @@ window.toggleDesktopSize = function(l) {
     document.getElementById('desktop-context-menu').style.display = 'none';
 };
 
-var unlockedWallpapers = JSON.parse(localStorage.getItem('cine_unlocked_wp')) || ['default'];
+var unlockedWallpapers = JSON.parse(localStorage.getItem('po_unlocked_wp')) || ['default'];
 window.wpMode = 'both';
 
 function setWallpaper(k, noti=false) {
@@ -980,7 +981,7 @@ function setWallpaper(k, noti=false) {
     
     if(noti && d.locked && !unlockedWallpapers.includes(d.id)) {
         unlockedWallpapers.push(d.id);
-        localStorage.setItem('cine_unlocked_wp', JSON.stringify(unlockedWallpapers));
+        localStorage.setItem('po_unlocked_wp', JSON.stringify(unlockedWallpapers));
         alert("Wallpaper: [ " + d.name + " ] Unlocked.");
     }
     
@@ -1110,9 +1111,9 @@ if(cvsSnow) {
 
 var MODES = ['FAST', 'THINKING', 'LIVE'];
 var cMode = 0;
-var isCiriActive = false;
+var isPoActive = false;
 var holdTimer = null;
-var hasBootCiri = false;
+var hasBootPo = false;
 var expectKey = false;
 var sStream = null;
 var cImgB64 = null;
@@ -1122,7 +1123,7 @@ function checkApiKey() {
     let st = document.getElementById('status-text');
     let si = document.getElementById('status-icon');
     if(!st) return;
-    if(localStorage.getItem('ciri_key')) {
+    if(localStorage.getItem('po_key')) {
         st.textContent = "Secure"; st.className = "secure";
         si.innerHTML = '<svg class="secure-svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>';
     } else {
@@ -1136,15 +1137,15 @@ window.autoGrow = function(el) { el.style.height = "5px"; el.style.height = (el.
 
 window.addEventListener('keydown', function(e) {
     if(e.altKey && (e.code === 'KeyS' || e.key.toLowerCase() === 's')) {
-        if(!holdTimer && !isCiriActive) {
+        if(!holdTimer && !isPoActive) {
             holdTimer = setTimeout(function() {
-                document.body.classList.add('ciri-active');
-                isCiriActive = true;
+                document.body.classList.add('po-active');
+                isPoActive = true;
                 let cInp = document.getElementById('chat-input');
-                if(!hasBootCiri) {
-                    let bs = document.getElementById('ciri-boot-screen');
+                if(!hasBootPo) {
+                    let bs = document.getElementById('po-boot-screen');
                     if(bs) bs.style.display = 'flex';
-                    setTimeout(function(){ document.getElementById('boot-ciri-text').classList.add('typing'); }, 300);
+                    setTimeout(function(){ document.getElementById('boot-po-text').classList.add('typing'); }, 300);
                     setTimeout(function(){ document.getElementById('boot-sub-text').classList.add('show'); }, 1100);
                     setTimeout(function() {
                         document.getElementById('boot-loader').style.opacity = '1';
@@ -1155,7 +1156,7 @@ window.addEventListener('keydown', function(e) {
                                 bs.style.filter = 'blur(10px)'; bs.style.opacity = '0';
                                 setTimeout(function() {
                                     bs.style.display = 'none';
-                                    hasBootCiri = true;
+                                    hasBootPo = true;
                                     if(cInp) cInp.focus();
                                 }, 800);
                             }, 1800);
@@ -1166,8 +1167,8 @@ window.addEventListener('keydown', function(e) {
                 }
             }, 2000);
         }
-    } else if(e.code === 'Escape' && isCiriActive) {
-        closeCiri();
+    } else if(e.code === 'Escape' && isPoActive) {
+        closePo();
     }
 });
 
@@ -1177,14 +1178,14 @@ window.addEventListener('keyup', function(e) {
     }
 });
 
-window.closeCiri = function() {
-    document.body.classList.remove('ciri-active');
-    isCiriActive = false;
+window.closePo = function() {
+    document.body.classList.remove('po-active');
+    isPoActive = false;
 };
 
 var aMedia = null;
 var nHide;
-var cNoti = document.getElementById('cine-noti');
+var cNoti = document.getElementById('po-noti');
 
 function showNoti() {
     if(!cNoti) return;
@@ -1360,7 +1361,7 @@ function chkFps() {
             fLC++;
             if(fLC >= 5 && !sysConfig.optBg) {
                 sysConfig.optBg = true;
-                localStorage.setItem('cine_sys_config', JSON.stringify(sysConfig));
+                localStorage.setItem('po_sys_config', JSON.stringify(sysConfig));
                 let bv = document.getElementById('bg-video');
                 let lv = document.getElementById('lock-video');
                 if(bv) bv.pause();
